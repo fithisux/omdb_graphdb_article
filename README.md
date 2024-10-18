@@ -18,6 +18,7 @@ docker run \
     -e NEO4J_PLUGINS=\[\"apoc\"\] \
     --env NEO4J_server_memory_heap_max__size=25G \
     --env NEO4J_db.memory.transaction.total.max=10G \
+    -e NEO4J_dbms_security_procedures_unrestricted="apoc.load.*" \
     neo4j:latest
 ```
 
