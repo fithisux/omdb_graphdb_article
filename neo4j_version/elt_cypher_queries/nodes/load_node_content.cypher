@@ -1,0 +1,17 @@
+CALL apoc.load.jsonArray('file:///node_content.json.gz')
+YIELD value
+WITH value
+CREATE (n:OMDB_CONTENT {
+    content_id:toInteger(value.content_id),
+    name:value.name,
+    parent_id:toIntegerOrNull(value.parent_id),
+    date:case value.date is null when true then null else datetime.fromepoch(value.date/1000, value.date%1000) end,
+    content_type:value.content_type,
+    runtime:toIntegerOrNull(value.runtime),
+    revenue:toIntegerOrNull(value.revenue),
+    budget:toIntegerOrNull(value.budget),
+    homepage:value.homepage,
+    vote_average: toFloatOrNull(value.vote_average),
+    vote_count: toIntegerOrNull(value.vote_count),
+    last_update:case value.last_update is null when true then null else datetime.fromepoch(value.last_update/1000, value.last_update%1000) end
+});
