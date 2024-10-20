@@ -1,4 +1,4 @@
-CALL apoc.load.jsonArray('file:///node_person_link.json.gz')
+CALL apoc.load.jsonArray('file:///node_content_person_link.json.gz')
 YIELD value
 WITH value
 CREATE (n:OMDB_PERSON_LINK {
