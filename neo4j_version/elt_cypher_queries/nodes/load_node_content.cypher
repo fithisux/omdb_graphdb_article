@@ -1,7 +1,7 @@
 CALL apoc.load.jsonArray('file:///node_content.json.gz')
 YIELD value
 WITH value
-CREATE (n:OMDB_CONTENT:$(toUpper(value.content_type)) {
+CREATE (n:OMDB_CONTENT {
     content_id:toInteger(value.content_id),
     name:value.name,
     parent_id:toIntegerOrNull(value.parent_id),
