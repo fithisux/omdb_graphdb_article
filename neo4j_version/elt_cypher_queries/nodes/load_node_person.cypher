@@ -6,6 +6,6 @@ CREATE (n:OMDB_PERSON {
     name:value.name,
     birthday:case value.birthday = 'None' when true then null else date(value.birthday) end,
     deathday:case value.deathday = 'None' when true then null else date(value.deathday) end,
-    gender: toIntegerOrNull(value.gender),
+    gender: toString(value.gender),
     aliases: toStringList(value.aliases)
 });

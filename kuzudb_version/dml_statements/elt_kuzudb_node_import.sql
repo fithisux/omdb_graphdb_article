@@ -1,0 +1,7 @@
+COPY OMDB_BUSINESS_PERSON FROM "./export_elt/gold_business_graph_node_person.parquet"
+COPY OMDB_BUSINESS_JOB FROM "./export_elt/gold_business_graph_node_job.parquet"
+COPY OMDB_BUSINESS_IMAGE FROM "./export_elt/gold_business_graph_node_image.parquet"
+COPY OMDB_BUSINESS_CONTENT FROM "./export_elt/gold_business_graph_node_content.parquet"
+COPY OMDB_BUSINESS_CHARACTER FROM "./export_elt/gold_business_graph_node_character.parquet"
+COPY OMDB_BUSINESS_CATEGORY FROM "./export_elt/gold_business_graph_node_category.parquet"
+COPY OMDB_BUSINESS_CAST FROM "./export_elt/gold_business_graph_node_cast.parquet"
