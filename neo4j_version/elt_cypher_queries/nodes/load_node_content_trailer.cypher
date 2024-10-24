@@ -1,4 +1,4 @@
-CALL apoc.load.jsonArray('file:///node_content_trailer.json.gz')
+CALL apoc.load.jsonArray('file:///gold_normalized_graph_node_content_trailer.json.gz')
 YIELD value
 WITH value
 CREATE (n:OMDB_CONTENT_TRAILER {

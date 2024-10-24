@@ -1,4 +1,4 @@
-CALL apoc.load.jsonArray('file:///node_content.json.gz')
+CALL apoc.load.jsonArray('file:///gold_normalized_graph_node_content.json.gz')
 YIELD value
 WITH value
 CREATE (n:OMDB_CONTENT {
@@ -12,5 +12,6 @@ CREATE (n:OMDB_CONTENT {
     homepage:value.homepage,
     vote_average: toFloatOrNull(value.vote_average),
     votes_count: toIntegerOrNull(value.votes_count),
-    last_update:case value.last_update is null when true then null else datetime.fromepoch(value.last_update/1000, value.last_update%1000) end
+    last_update:case value.last_update is null when true then null else datetime.fromepoch(value.last_update/1000, value.last_update%1000) end,
+    countries:toStringList(value.countries)
 });
