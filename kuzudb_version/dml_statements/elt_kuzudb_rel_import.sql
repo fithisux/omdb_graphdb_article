@@ -8,4 +8,4 @@ COPY OMDB_BUSINESS_EPISODE_HAS_SERIES FROM "./export_elt/gold_business_graph_edg
 COPY OMDB_BUSINESS_MOVIE_HAS_MOVIESERIES FROM "./export_elt/gold_business_graph_edge_movie_has_movieseries.json"
 COPY OMDB_BUSINESS_PERSON_HAS_CAST FROM "./export_elt/gold_business_graph_edge_person_has_cast.json"
 COPY OMDB_BUSINESS_SEASON_HAS_SERIES FROM "./export_elt/gold_business_graph_edge_season_has_series.json"
-COPY OMDB_BUSINESS_SERIES_HAS_MOVIESERIES FROM "./export_elt/gold_business_graph_edge_series_has_series.json"
+COPY OMDB_BUSINESS_SERIES_HAS_MOVIESERIES FROM "./export_elt/gold_business_graph_edge_series_has_movieseries.json"
