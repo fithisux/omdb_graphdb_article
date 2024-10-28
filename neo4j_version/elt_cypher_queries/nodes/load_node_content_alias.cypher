@@ -3,6 +3,6 @@ YIELD value
 WITH value
 CREATE (n:OMDB_CONTENT_ALIAS {
     name: value.name,
-    official_translation:toBooleanOrNull(value.parent_id),
+    official_translation:toBooleanOrNull(value.official_translation),
     language_iso_639_1: value.language_iso_639_1
 });
