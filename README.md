@@ -29,6 +29,8 @@ docker run \
     -e NEO4J_dbms_security_procedures_unrestricted="apoc.load.*" \
     neo4j:latest
 ```
+
+Login to `http://localhost:7474` (username/password https://hub.docker.com/_/neo4j) and replace the default password with `pass1234`
 Checkout the above repo and run the dbt pipeline (see REDMAE there). 
 Please run the [neo4j_export.ipynb](neo4j_version/neo4j_export.ipynb) notebook while having fixed if necessary the paths in order to export to json.gz.
 Please run the [neo4j_load.ipynb](neo4j_version/neo4j_load.ipynb) to load graph to neo4j.
@@ -39,3 +41,12 @@ Please run the [neo4j_load.ipynb](neo4j_version/neo4j_load.ipynb) to load graph 
 Checkout the above repo and run the dbt pipeline (see REDMAE there). 
 Please run the [kuzudb_export.ipynb](kuzudb_version/kuzudb_export.ipynb) notebook while having fixed if necessary the paths in order to export to json.
 Please run the [kuzudb_load.ipynb](kuzudb_version/kuzudb_load.ipynb) to load graph to kuzudb.
+
+Explorer through
+
+```
+ docker run -p 8000:8000 \
+           -v c:/work/omdb_graphdb_article/kuzudb_version/kuzudb_elt:/database \
+           --rm kuzudb/explorer:latest
+
+```
