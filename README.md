@@ -2,7 +2,7 @@
 # Graph Gold Models for the OMDB dataset
 
 Before proceeding make yourself a favor and create a virtual environemnt. Tested with Python 3.12.7 on Windows x64 10. What's on the menu? 
-A Neo4j graph database from the OMDB gold **normalized** graph model [OMDB DBT PROJECT](https://github.com/fithisux/omdb_manual_dataset/tree/main). A Kuzu database from the OMDB gold **business** graph model [OMDB DBT PROJECT](https://github.com/fithisux/omdb_manual_dataset/tree/main). Capabilities of the databases allows to have 2 completely different modeling processes with important subtleties.
+A Neo4j graph database from the OMDB gold **normalized** graph model [OMDB Manual Dataset](https://github.com/fithisux/omdb_manual_dataset/tree/main). A Kuzu database from the OMDB gold **business** graph model [OMDB DBT PROJECT](https://github.com/fithisux/omdb_manual_dataset/tree/main). Capabilities of the databases allows to have 2 completely different modeling processes with important subtleties.
 
 Enjoy!
 
